@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaInstagram } from "react-icons/fa";
 import { BsLaptop } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logobgless3.svg";
@@ -48,12 +48,12 @@ function Footer() {
             <h1 className="text-lg font-bold mb-3">CONTACT US</h1>
             <div className="flex flex-col gap-2 text-lg font-semibold">
               <a
-                href="https://www.linkedin.com/in/ashfaq-ahmed-khan-2264152ab/"
+                href="https://wa.me/916350511150"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-slate-400 gap-2 hover:text-blue-50"
               >
-                <FaLinkedin /> Linkedin
+                <FaWhatsapp /> WhatsApp
               </a>
               <a
                 href="https://github.com/Ashfaq-AK"
@@ -64,7 +64,7 @@ function Footer() {
                 <FaGithub /> Github
               </a>
               <a
-                href="https://www.instagram.com/_khan._sab_/"
+                href="https://www.instagram.com/ashfaq_a.k_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-slate-400 gap-2 hover:text-blue-50"
