@@ -66,8 +66,6 @@ function Home() {
     }
   };
 
-  
-
   return (
     <main className="w-full flex justify-center items-start gap-4 px-4 py-3">
       <div className="h-full w-full">
@@ -80,8 +78,8 @@ function Home() {
           <Carousel />
         </motion.div>
         <div className=" rounded-2xl flex flex-col justify-center items-center p-4">
-          <div className="h-12 w-full border-b-[1px] border-slate-500 flex justify-center items-center mb-5">
-            <h1 className="text-2xl text-zekifont font-montserrat">
+          <div className="h-12 md:flex hidden w-full border-b-[1px] border-slate-500 justify-center items-center mb-5">
+            <h1 className="text-2xl  text-zekifont font-montserrat">
               “Learn. Build. Conquer. Your dev journey starts here.”
             </h1>
           </div>
@@ -99,8 +97,18 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className={`h-full w-full rounded-xl fixed left-0 top-20 p-4 ${showModal ? "inset-0 backdrop:blur-md bg-black/50" : "hidden"}`} onClick={() => setShowModal(false)}>
-        {showModal && <SuggestionForm onclose={() => setShowModal(false)} onSuccess={() => setShowModal(false)} />}
+      <div
+        className={`h-full w-full rounded-xl fixed left-0 top-20 p-4 ${
+          showModal ? "inset-0 backdrop:blur-md bg-black/50" : "hidden"
+        }`}
+        onClick={() => setShowModal(false)}
+      >
+        {showModal && (
+          <SuggestionForm
+            onclose={() => setShowModal(false)}
+            onSuccess={() => setShowModal(false)}
+          />
+        )}
       </div>
     </main>
   );

@@ -84,6 +84,7 @@ function Navbar() {
           <div className="flex justify-center items-center flex-col gap-4 absolute right-3 top-18 z-50 bg-primary rounded-xl px-4 py-3">
             {links.map((link, index) => (
               <NavLink
+                onClick={handleMenuToggle}
                 to={link.path}
                 key={index}
                 className={({ isActive }) =>

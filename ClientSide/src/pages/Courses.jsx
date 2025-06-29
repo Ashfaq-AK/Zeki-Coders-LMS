@@ -8,17 +8,17 @@ function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [courses, setCourses] = useState([]);
 
-                      
   useEffect(() => {
     const fetchCourses = async () => {
       try {
         const response = await API.get("/api/courses");
+        console.log(response.data);
         setCourses(response.data);
       } catch (error) {
         console.error("Error fetching courses:", error);
       }
     };
-    fetchCourses(); 
+    fetchCourses();
   }, []);
 
   const filteredCourses =

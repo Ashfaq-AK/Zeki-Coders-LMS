@@ -8,7 +8,8 @@ function CodeLab() {
   return (
     <div className="w-full px-4 flex flex-col justify-center">
       <div className="my-3">
-        <div className="flex flex-row items-center gap-4 w-80 mb-[-40px]">
+        <div className="md:hidden block text-2xl text-purple-50 text-center font-semibold mb-4">Better experience on Desktop</div>
+        <div className="flex flex-row items-center gap-4 w-80 mb-2 md:mb-[-40px]">
           <button
             onClick={() => setActiveTab("code")}
             className={`flex justify-center items-center text-xl z-20 bg-blue-50 border-2 border-primary font-bold px-4 py-2 rounded-md ${
