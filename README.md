@@ -65,18 +65,18 @@ When I started my journey in IT, I struggled with scattered resources, unclear r
 git clone https://github.com/YourUsername/ZekiCoder-LMS.git
 
 # Navigate to the project directory
-cd ZekiCoder-LMS
+cd ZekiCoders-LMS
 
 # Install frontend dependencies
-cd frontend
+cd ClientSide
 npm install
 
 # Install backend dependencies
-cd ../backend
+cd ServerSide
 npm install
 
-# Run frontend (Vite or Create React App)
+# Run ClientSide
 npm run dev
 
-# Run backend
+# Run ServerSide
 npm run start
