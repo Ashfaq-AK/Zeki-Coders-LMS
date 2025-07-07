@@ -91,6 +91,7 @@ function Home() {
                 description={card.description}
                 buttonText={card.buttonText}
                 image={card.image}
+                to={card.to}
                 onClick={() => handleCardClick(card)}
               />
             ))}
