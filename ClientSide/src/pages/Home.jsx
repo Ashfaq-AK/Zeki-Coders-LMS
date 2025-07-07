@@ -61,8 +61,6 @@ function Home() {
   const handleCardClick = (card) => {
     if (card.title === "SUGGESTIONS") {
       setShowModal(true);
-    } else if (card.to) {
-      window.location.href = card.to;
     }
   };
 
