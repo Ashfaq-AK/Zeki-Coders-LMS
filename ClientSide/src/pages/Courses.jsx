@@ -1,26 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState /*, useEffect */ } from "react";
 import Sidebar from "../components/courses/Sidebar";
 import CourseCard from "../components/courses/CourseCard";
 import { GiWhiteBook } from "react-icons/gi";
-import API from "../api";
+// import API from "../api";
 import Seo from "../components/Seo";
+import coursesData from "../assets/courses.json"; // local JSON file
 
 function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState(coursesData); // set directly from local file
+  // const [loading, setLoading] = useState(true);
 
+  /*
   useEffect(() => {
     const fetchCourses = async () => {
       try {
         const response = await API.get("/api/courses");
-        console.log(response.data);
         setCourses(response.data);
       } catch (error) {
         console.error("Error fetching courses:", error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchCourses();
   }, []);
+  */
 
   const filteredCourses =
     selectedCategory === "All"
@@ -45,7 +50,8 @@ function Courses() {
                 {selectedCategory} Courses
               </h1>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full  gap-4 pl-1">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4 pl-1">
               {filteredCourses.map((course, index) => (
                 <CourseCard key={index} course={course} />
               ))}
